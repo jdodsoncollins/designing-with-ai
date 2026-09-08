@@ -1,14 +1,14 @@
 # The method
 
-AI is a next-token predictor. At every design decision it fills in the tokens most likely to please everyone. That is the opposite of taste. The process below is how to force it off that average without pretending the model has taste of its own.
+AI is a next-token predictor. At every design decision it fills in the tokens most likely to please everyone. The process below is how to force it off that average without pretending the model has taste of its own.
 
-It is one loop, not three competing philosophies. Dailey supplies the spine (constraints, whole, remove). Jaimin supplies the one-shot (named products, real screens). Chimala supplies the exploration and critic machinery (seed strings, ambitious briefs, pixel-only critic, generated imagery).
+One loop. Dailey supplies the spine (constraints, whole, remove). Jaimin supplies the one-shot (named products, real screens). Chimala supplies the exploration and critic machinery (seed strings, ambitious briefs, pixel-only critic, generated imagery).
 
 ## 0. Surface, not product
 
 Iterate in a design tool. Figma, an HTML prototype, Cursor Design Mode, Claude Design, or a `/showcase` route of components all count. The product codebase does not.
 
-Prototype gravity: once the agent has grafted a first take onto real routes, data, and chrome, every later prompt only patches that graft. You never see the other three directions you should have compared.
+Prototype gravity is the cost of grafting v1 into the real app. Later prompts only patch that graft, so you never see the other three directions you should have compared.
 
 Dailey: generate 3–4 variants of everything, in a tool meant for design.
 
@@ -24,7 +24,7 @@ Constraints are jobs, states, platform rules, type, spacing, performance, and wh
 
 The failure mode is wackamole: a user is confused, so you prompt “make X more prominent.” AI loves that prompt. You get a disjoint patchwork that randomly prioritizes some interactions over others.
 
-When feedback arrives, ask: does this change a constraint? If yes, restart. If no, log a papercut. Ship obvious breaks now. Hold minor annoyances for a cohesive pass. Keep that list in the repo — [templates/papercuts.md](../templates/papercuts.md).
+When feedback arrives, ask: does this change a constraint? If yes, restart. If no, log a papercut. Ship obvious breaks now. Hold minor annoyances for a cohesive pass. Keep that list in the repo, [templates/papercuts.md](../templates/papercuts.md).
 
 Blank sheet: [templates/constraints.md](../templates/constraints.md).
 
@@ -46,7 +46,7 @@ The model cannot act randomly. Asking it to “make every decision at random” 
 
 **Seed string (Sakana SSOT, via Chimala):** generate a long alphanumeric string in the shell, derive color / type / layout / motif from subpatterns, keep the string out of the UI, run it 3–4 times, present the variants, do not deepen the first one. Template: [templates/seed-string.md](../templates/seed-string.md).
 
-**Ambitious brief:** you name a slightly dangerous inspiration — a game still, an isometric city, an industrial panel, a rule-breaking asymmetric layout. Ask the model for a *broad, shallow* list of directions. You react. You steer. Then you ask it to write the build prompt. AI-generated ideas pasted straight back into AI stay average; the steering is the original part. Save prompts that fail and retry them when models improve.
+**Ambitious brief:** you name a slightly dangerous inspiration (a game still, an isometric city, an industrial panel, a rule-breaking asymmetric layout). Ask the model for a *broad, shallow* list of directions. You react. You steer. Then you ask it to write the build prompt. AI-generated ideas pasted straight back into AI stay average; the steering is the original part. Save prompts that fail and retry them when models improve.
 
 ## 4. Define: a critic that never sees the repo
 
@@ -58,11 +58,11 @@ Each loop:
 2. Fresh critic context: screenshot only. No code, no prior critique, no implementation notes.
 3. Name the aesthetic. Imagine a top studio executing it. List the biggest gaps (structure, then detail). Penalize overdone AI patterns. Score /10 against the studio bar, not the last iteration.
 4. Implement only those gaps.
-5. Stop after 1–2 loops unless the score is rising. Do not put the 9/10 stop rule in the critic prompt — it will never fire, or it will rubber-stamp.
+5. Stop after 1–2 loops unless the score is rising. Do not put the 9/10 stop rule in the critic prompt. It will never fire, or it will rubber-stamp.
 
 Stronger (and more expensive) model as critic. Cheaper model as implementer. A good critic can be a small fraction of tokens and still change the identity of the screen.
 
-Even better critic: rank 4 professional examples + 1 current screenshot by polish. Concrete, visual, hard to waffle.
+A tighter critic: rank 4 professional examples + 1 current screenshot by polish. Concrete, visual, hard to waffle.
 
 When image or video tools exist, tell the agent to use them. Code-only gradients, shapes, and patterns are an AI tell. Keys live in a gitignored env file and must not ship.
 
@@ -74,9 +74,9 @@ Agents add. Copy, lines, icons, glow, custom buttons, labels that repeat the ima
 
 Walk every element: do I need that? Prefer native platform controls. Prefer one grid of meaning. Delete decorative containers and explanatory prose.
 
-Separate views from logic. New pieces land on `/showcase` before they touch product data. Evaluate with real data — preview deploy, simulator, or a fixture that matches production shape. Unit tests do not prove a frontend. Backend can be verified in tests; frontend needs a human holding it.
+Separate views from logic. New pieces land on `/showcase` before they touch product data. Evaluate with real data (preview deploy, simulator, or a fixture that matches production shape). Unit tests do not prove a frontend. Backend can be verified in tests; frontend needs a human holding it.
 
-Taste is not a vibe. It is a solution library built from reps: try, feel, name the feeling, try again. Engineers are good at spotting that a design does not work and short on examples of how to fix it. The threshing is the work.
+Taste is a solution library built from reps: try, feel, name the feeling, try again. Engineers are good at spotting that a design does not work and short on examples of how to fix it. The threshing is the work.
 
 ## 6. Hand-off into the product
 
@@ -88,8 +88,4 @@ Only after a direction is chosen:
 
 If the request was only for directions, stop. Do not silently start coding.
 
-## What this is not
-
-- Not a Jobs/Ive audit of an existing visual system. That is a later pass, on screens that already exist.
-- Not Appllama itself. If that MCP is installed, use it inside step 2; do not reimplement their catalog here.
-- Not Technique 7 from the Lenny piece. That section is paywalled. Read it there.
+Score existing screens with `design-audit`. Appllama’s catalog stays upstream; use it in step 2 if it is installed. Lenny’s Technique 7 is paywalled; read it there.

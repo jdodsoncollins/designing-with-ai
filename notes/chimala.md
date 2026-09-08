@@ -1,12 +1,12 @@
 # Discover, Define, Deliver
 
-Source: [Anshu Chimala, “How to turn your AI into a world-class designer,” Lenny’s Newsletter, 2026-09-01](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world). Public techniques 1–6 are summarized here. Technique 7 is paywalled and is not restated.
+Source: [Anshu Chimala, “How to turn your AI into a world-class designer,” Lenny’s Newsletter, 2026-09-01](https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world). Public techniques 1–6 are summarized here. Technique 7 is paywalled.
 
-Chimala’s diagnosis: models are trained to make the safe next token. Great design starts from feeling and makes unexpected choices. If you can push the model off the mode, you get at the rest of the distribution. The Double Diamond, rewritten for agents:
+Chimala’s diagnosis: models are trained to make the safe next token. Great design starts from feeling and makes unexpected choices. Push the model off the mode and you get at the rest of the distribution. The Double Diamond, rewritten for agents:
 
-1. **Discover** — go broad. Variety and ambitious briefs.
-2. **Define** — give one direction a personality. Critic loops, generated imagery.
-3. **Deliver** — cut until it holds.
+1. **Discover.** Go broad. Variety and ambitious briefs.
+2. **Define.** Give one direction a personality. Critic loops, generated imagery.
+3. **Deliver.** Cut until it holds.
 
 ## Discover
 
@@ -51,18 +51,14 @@ Template: [templates/critic.md](../templates/critic.md).
 
 Coding agents prefer gradients, shapes, and CSS patterns. Those are AI tells. Tell the agent to use image tools. Keys stay in a gitignored env file and do not ship.
 
-Video models are not only for ads. Two uses from the public piece: looping clips with the background matted out, layered into UI; and interpolating between keyframe stills so a scroll or gesture scrubs a transition.
+Two uses from the public piece: looping clips with the background matted out, layered into UI; and interpolating between keyframe stills so a scroll or gesture scrubs a transition.
 
 ## Deliver
 
 ### Cut what does not add value
 
-AI adds. Premium reads as restraint. On a “clean, minimalist” calorie tracker the first take still had glow, random text highlights, labels that repeated the food photos, and custom controls that lost to native iOS.
+AI adds. On a “clean, minimalist” calorie tracker the first take still had glow, random text highlights, labels that repeated the food photos, and custom controls that lost to native iOS.
 
-The push: simplify to an image-centric grid, delete gradients / glow / extra containers, use native components, tighten type. The model will not take that risk on its own — deleting code is risky in its training.
+The push: simplify to an image-centric grid, delete gradients / glow / extra containers, use native components, tighten type. The model will not take that risk on its own. Deleting code is risky in its training.
 
-Walk the screen. Ask what needs to be there. Less on screen can hold attention better than more.
-
-### Technique 7
-
-Paywalled at the source. Not restated in this repo.
+Walk the screen. Ask what needs to be there.

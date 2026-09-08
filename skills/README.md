@@ -1,6 +1,6 @@
 # Skills
 
-`design-with-ai` is the only skill in this repo. It is the agent-facing procedure; human notes live in `/notes`.
+`design-with-ai` is the only skill in this repo. Human notes live in `/notes`.
 
 Install:
 
@@ -12,4 +12,4 @@ mkdir -p ../.agents/skills && cp -R design-with-ai ../.agents/skills/
 
 Trigger: `/design-with-ai`, or any request to design, de-slop, one-shot, generate variants, or run a design critic.
 
-Do not also load a Jobs/Ive audit skill in the same turn unless the user asked to score existing screens.
+Load `design-audit` in the same turn only when the user asked to score existing screens.

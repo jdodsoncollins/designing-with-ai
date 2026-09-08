@@ -4,7 +4,7 @@ Product:
 Date:
 Direction name (after Discover):
 
-Fill this before generating. If a constraint changes, restart — do not patch.
+Fill this before generating. If a constraint changes, restart. Do not patch.
 
 ## Jobs
 

@@ -19,9 +19,9 @@ Synthesized 2026-09-08. Summaries in this repo are working notes. The posts are 
    - https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world
    - Sakana AI, String Seed of Thought: https://pub.sakana.ai/ssot/
    - Double Diamond (Design Council): https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)
-   - Technique 7 is paywalled and is not restated here.
+   - Technique 7 is paywalled.
 
-## Related, not duplicated
+## Related
 
-- Jobs/Ive audit of an existing visual system: the `design-audit` Grok user skill. Different job from generating.
-- Appllama’s own `appllama-usage` / app-design skills, if that MCP is installed. Use them; do not fork them into this repo.
+- Jobs/Ive audit of an existing visual system: the `design-audit` Grok user skill.
+- Appllama’s own `appllama-usage` / app-design skills, if that MCP is installed. Use them. Do not fork them into this repo.

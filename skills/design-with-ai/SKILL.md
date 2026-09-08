@@ -16,7 +16,7 @@ Default: propose a constraint list and 3–4 directions, then wait for the user 
 
 ## 0. Do not start in the product
 
-Iterate in a design surface first: HTML prototype, Figma, Cursor Design Mode, or a `/showcase` page of components. Building the first take in the real app creates prototype gravity — later prompts only patch that graft.
+Iterate in a design surface first: HTML prototype, Figma, Cursor Design Mode, or a `/showcase` page of components. Building the first take in the real app creates prototype gravity. Later prompts only patch that graft.
 
 If the user already has a live screen, still extract constraints and references before editing pixels.
 
@@ -56,7 +56,7 @@ Run this **3–4 times**. Present the variants. Do not deepen the first one.
 
 **Ambitious brief:** the user names a specific, slightly dangerous inspiration (a game still, an interior, an industrial panel). Ask the model for a broad, shallow list of directions, then the user steers. AI-generated ideas pasted back into AI stay average.
 
-## 4. Define: critic loop, not self-review
+## 4. Define: critic loop
 
 Do not ask the implementer to “improve the design.” It will defend its own code.
 

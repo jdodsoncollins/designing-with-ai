@@ -6,4 +6,4 @@ Feedback that does **not** change a constraint. Do not prompt “make X more pro
 | --- | --- | --- | --- | --- |
 | | | | | open |
 
-When a row *does* change a constraint, move it to `docs/design-constraints.md` and restart from the constraint list. Do not patch in place.
+When a row changes a constraint, move it to `docs/design-constraints.md` and restart from the constraint list. Do not patch in place.
