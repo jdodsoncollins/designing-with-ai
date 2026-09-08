@@ -33,7 +33,7 @@ Use [library/MCP if available]. Build [name].
 Flows of [App A]. Design of [App B].
 ```
 
-Example (Jaimin / Appllama, 2026-09-07): Stelari — flows of Chani, design of Blank Spaces.
+Example (Jaimin / Appllama, 2026-09-07): Stelari. Flows of Chani, design of Blank Spaces.
 
 ## Cut list
 
