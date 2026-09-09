@@ -11,6 +11,6 @@ Synthesized 2026-09-08. These are the originals; the skill is the working method
 3. Anshu Chimala via Lenny’s Newsletter, 2026-09-01 — https://www.lennysnewsletter.com/p/how-to-turn-your-ai-into-a-world
    Discover / Define / Deliver. Seed strings (Sakana SSOT). Ambitious briefs. Critic subagent on screenshots. Image (and video) generation. Cut what does not add value. Technique 7 (“remove AI tells”) is behind the paywall and is not restated here.
 
-Related, not duplicated: user skill `design-audit` (Jobs/Ive pass on existing UI). Appllama’s own `appllama-usage` / `appllama-app-design-skill` if that MCP is installed.
+Related: user skill `design-audit` (Jobs/Ive pass on existing UI). Appllama skills live in this repo under `skills/appllama-usage` and `skills/appllama-app-design-skill` (vendored from https://github.com/Appllama/appllama-skills).
 
-Public copy of this skill plus notes: https://github.com/jdodsoncollins/designing-with-ai
+Public copy: https://github.com/jdodsoncollins/designing-with-ai

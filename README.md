@@ -26,30 +26,30 @@ The skill tells an agent what to do. The notes are for you. Templates are copy-p
 
 Full write-up: [notes/method.md](notes/method.md).
 
-## Agent skill
+## Agent skills
 
-[`skills/design-with-ai/`](skills/design-with-ai/) works with Grok, Claude, and Cursor.
+[`skills/design-with-ai/`](skills/design-with-ai/) is the method. [`skills/appllama-usage/`](skills/appllama-usage/) and [`skills/appllama-app-design-skill/`](skills/appllama-app-design-skill/) are vendored from [Appllama/appllama-skills](https://github.com/Appllama/appllama-skills). Agents in this repo also load them via `.agents/skills/`. See [AGENTS.md](AGENTS.md).
 
 ```bash
-# Grok (user profile, all projects)
+# Method skill
 cp -R skills/design-with-ai ~/.grok/skills/
 
-# Claude Code
-cp -R skills/design-with-ai ~/.claude/skills/
-
-# This repo only
-mkdir -p .agents/skills
-cp -R skills/design-with-ai .agents/skills/
+# Appllama pair (Grok, Claude, Cursor)
+npx skills@latest add appllama/appllama-skills -g -a grok -a claude-code -a cursor -y --copy
 ```
 
-Then run `/design-with-ai`, or ask to design a screen, de-slop a UI, or one-shot an app. The skill tells the agent to propose constraints and 3–4 directions and wait before building in the product.
+Then `/design-with-ai`, or ask to design a screen, de-slop a UI, or one-shot an app. The skill tells the agent to propose constraints and 3–4 directions and wait before building in the product.
 
-Score screens that already exist with `design-audit` (Grok user skill). Load this skill when generating.
+If Appllama MCP is connected (`https://mcp.appllama.io/mcp`), study real screens with `appllama-usage` before drawing. Build Expo/RN screens with `appllama-app-design-skill`. Score screens that already exist with `design-audit` (Grok user skill).
 
 ## Repo map
 
 ```
-skills/design-with-ai/     Agent procedure
+AGENTS.md                  How agents should load the skills
+.mcp.json                  Appllama MCP endpoint
+.agents/skills/            Auto-discovery (symlinks into skills/)
+skills/design-with-ai/     Method
+skills/appllama-*          Vendored Appllama pair
 notes/                     Human notes, one per source plus the synthesis
 templates/                 Constraints, critic, one-shot, seed string, papercuts
 ```
@@ -67,7 +67,7 @@ templates/                 Constraints, critic, one-shot, seed string, papercuts
 | [templates/seed-string.md](templates/seed-string.md) | Variety loop |
 | [templates/papercuts.md](templates/papercuts.md) | Hold minor annoyances for a cohesive pass |
 
-Lenny's Technique 7 (“remove AI tells”) is paywalled. Read it at the source. Appllama's own skills stay upstream: [Appllama/appllama-skills](https://github.com/Appllama/appllama-skills). MCP: `https://mcp.appllama.io/mcp`. This repo has no generated mock UIs.
+Lenny's Technique 7 (“remove AI tells”) is paywalled. Read it at the source. This repo has no generated mock UIs. Refresh Appllama skills from [upstream](skills/UPSTREAM.md). MCP: `https://mcp.appllama.io/mcp`.
 
 ## License
 

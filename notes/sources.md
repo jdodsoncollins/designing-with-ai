@@ -24,4 +24,4 @@ Synthesized 2026-09-08. Summaries in this repo are working notes. The posts are 
 ## Related
 
 - Jobs/Ive audit of an existing visual system: the `design-audit` Grok user skill.
-- Appllama’s own `appllama-usage` / app-design skills, if that MCP is installed. Use them. Do not fork them into this repo.
+- Appllama skills are vendored in `skills/` from [Appllama/appllama-skills](https://github.com/Appllama/appllama-skills) (MIT). Refresh from upstream; do not fork their playbooks.
